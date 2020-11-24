@@ -178,7 +178,7 @@ Now our jar file is created that contains all the WordCount* classes.
 ## Running the application
 At path ```/usr/local/Cellar/hadoop/3.2.1_1/bin```, you can write the following line:
 ```console
-$ hadoop jar wordcount.jar WordCount <path to input file> <path to output file>
+$ hadoop jar wordcount.jar WordCount "path_to_input_file" "path_to_output_file"
 ```
 I had writen the following line:
 ```console
@@ -259,7 +259,7 @@ I got the output in the file [part-r-00000](/part-r-00000)
 
 If you run the following code at path ```/usr/local/Cellar/hadoop/3.2.1_1/bin``` you will get wordcount of words.
 ```console
-$ hadoop fs -cat <path to output/part-r-00000>
+$ hadoop fs -cat "path_to_output/part-r-00000"
 ```
 I had written the following code:
 ```console
