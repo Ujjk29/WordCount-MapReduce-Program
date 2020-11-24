@@ -160,3 +160,14 @@ public class WordCount {
    }
 }
 ```
+I had saved this java program at path ```/usr/local/Cellar/hadoop/3.2.1_1/bin``` with name ```WordCount.java```
+Now to compile this program I used the following line of code
+```console
+$ cd /usr/local/Cellar/hadoop/3.2.1_1/bin
+$ hadoop com.sun.tools.javac.Main WordCount.java
+```
+Now WordCount.java is compiled and three classes are created. And I now create a jar file with all the classes in it.
+```console
+$ jar cf wordcount.jar WordCount*.class
+```
+Now our jar file is created that contains all the WordCount* classes.
