@@ -39,29 +39,29 @@ export HADOOP_OS_TYPE=${HADOOP_OS_TYPE:-$(uname -s)}
 
 After this I had made changes to the following files:
 1. Core files
-```console
-$ open core-site.xml
-```
-In that file, I had added the following lines:
-```xml
-<configuration>
-   <property>
-      <name>fs.defaultFS</name>
-      <value></value>
-   </property>
-</configuration>
-```
+   ```console
+   $ open core-site.xml
+   ```
+   In that file, I had added the following lines:
+   ```xml
+   <configuration>
+      <property>
+         <name>fs.defaultFS</name>
+         <value></value>
+      </property>
+   </configuration>
+   ```
 
 2. hdfs file
-```console
-$ open hdfs-site.xml
-```
-In that file, I had added the following lines:
-```xml
-<configuration>
-    <property>
-        <name>dfs.replication</name>
-        <value>1</value>
-    </property>
-</configuration>
-```
+   ```console
+   $ open hdfs-site.xml
+   ```
+   In that file, I had added the following lines:
+   ```xml
+   <configuration>
+       <property>
+           <name>dfs.replication</name>
+           <value>1</value>
+       </property>
+   </configuration>
+   ```
