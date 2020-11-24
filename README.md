@@ -115,6 +115,9 @@ $ cd /usr/local/Cellar/hadoop/3.2.1/libexec/sbin
 $ ./start-all.sh
 ```
 
+## Input Text
+I have used the book "Pride and Prejudice".
+
 ## WordCount Java Code Snippet
 ```java
 import java.io.IOException; import java.util.StringTokenizer;
@@ -251,4 +254,20 @@ Following is the console output:
                   Bytes Read=785207
          File Output Format Counters 
                   Bytes Written=153540
+```
+I got the output in the file [part-r-00000](/part-r-00000)
+
+If you run the following code at path ```/usr/local/Cellar/hadoop/3.2.1_1/bin``` you will get wordcount of words.
+```console
+$ hadoop fs -cat <path to output/part-r-00000>
+```
+I had written the following code:
+```console
+$ hadoop fs -cat /Users/ujjk29/Desktop/wordcount/output/part-r-0000
+```
+
+## Stopping the Hadoop environment
+Write the following code at path ```/usr/local/hadoop/3.2.1_1/sbin```
+```console
+$ ./stop-all.sh
 ```
