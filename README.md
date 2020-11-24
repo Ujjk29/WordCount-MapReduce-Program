@@ -59,9 +59,51 @@ After this I had made changes to the following files:
    In that file, I had added the following lines:
    ```xml
    <configuration>
-       <property>
-           <name>dfs.replication</name>
-           <value>1</value>
-       </property>
+      <property>
+         <name>dfs.replication</name>
+         <value>1</value>
+      </property>
    </configuration>
    ```
+
+3. Mapred file
+   ```console
+   $ open mapred-site.xml
+   ```
+   In that file, I had added the following lines:
+   ```xml
+   <configuration>
+      <property>
+         <name>mapreduce.framework.name</name>
+         <value>yarn</value>
+      </property>
+      <property>
+         <name>mapreduce.application.classpath</name>
+         <value>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*:$HADOOP_MAPRED_HOM E/share/hadoop/mapreduce/lib/*</value>
+      </property>
+   </configuration>
+   ```
+
+4. Yarn File
+   ```console
+   $ open yarn-site.xml
+   ```
+   In that file, I had added the following lines:
+   ```xml
+   <configuration>
+      <property>
+         <name>yarn.nodemanager.aux-services</name>
+         <value>mapreduce_shuffle</value>
+      </property>
+      <property>
+         <name>yarn.nodemanager.env-whitelist</name>
+         <value>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CON F_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED _HOME</value>
+      </property>
+   </configuration>
+   ```
+
+Now I run the following command to format namenode.
+```console
+$ cd /usr/local/Cellar/hadoop/3.2.1_1/libexec/bin
+$ hdfs namenode -format
+```
