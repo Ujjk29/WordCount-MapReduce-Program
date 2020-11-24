@@ -107,3 +107,10 @@ Now I run the following command to format namenode.
 $ cd /usr/local/Cellar/hadoop/3.2.1_1/libexec/bin
 $ hdfs namenode -format
 ```
+
+## Running the Hadoop
+To run the Hadoop environment, write the following command.
+```console
+$ cd /usr/local/Cellar/hadoop/3.2.1/libexec/sbin
+$ ./start-all.sh
+```
