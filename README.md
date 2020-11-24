@@ -29,7 +29,7 @@ $ open hadoop-env.sh
 ```
 
 Now I wrote the following line on hadoop-env.sh
-```java
+```sh
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home"
 export PATH=${JAVA_HOME}/bin:${PATH}
 export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
